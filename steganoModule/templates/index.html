@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stegano</title>
+    <link href="../static/assets/styles/css/hacker.css" rel="stylesheet">
+
+    <style>
+    .tall-row {
+        margin-top: 40px;
+    }
+    .modal {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        bottom: auto;
+        z-index: 1;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Stegano</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1>Stegano Apps</h1>
+            <p>Embed and extract hidden message to/from an image</p>
+            <p>
+                <a class="btn btn-lg btn-primary" href="http://localhost:8000/encodePage" role="button">Embeed</a>
+                <a class="btn btn-lg btn-primary" href="http://localhost:8000/decodePage" role="button">Extract</a>
+                <a class="btn btn-primary" id="stars"></a>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Github stars script -->
+    <script>
+    $(document).ready(function(){
+        $.getJSON("https://api.github.com/repos/Bachittarjeet/Hacker-Bootstrap-Template/", function(data){
+            var stars = data['stargazers_count'];
+            $("#stars").text(stars + " stars");
+        });
+    });
+    </script>
+
+</body>
+</html>
